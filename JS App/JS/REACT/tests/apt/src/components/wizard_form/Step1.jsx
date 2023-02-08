@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export const Step = ({onNext}) => {
-	const[formState, setFormState] = useState({username: "", password:""});
+	const[formState, setFormState] = useState({email: "", password:""});
 	const handleChange = (event) => {
 		console.log(event);		
 		const name = event.target.name;
@@ -11,14 +11,12 @@ export const Step = ({onNext}) => {
 	return (
 		<div>
 			<input
-
-				name='username' 
+				name='email' 
 				type="text" 
-				placeholder='Enter username' 
+				placeholder='Enter Your Email' 
 				value={formState.username}
 				onChange={handleChange}
 			/><br/>
-
 			<input 
 				name='password' 
 				type="password" 

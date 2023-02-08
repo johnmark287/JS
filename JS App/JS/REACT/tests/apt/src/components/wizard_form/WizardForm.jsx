@@ -6,8 +6,8 @@ import { Step3 } from './Step3';
 
 const WizardForm = () => {
     const[step, setStep] = useState(1);
-// carries user data
-    const[formState, setFormState] = useState();
+    // carries user data
+    // const[formState, setFormState] = useState();
     
     const nextStep = () => setStep(step +1);
     const previousStep = () => setStep(step - 1);

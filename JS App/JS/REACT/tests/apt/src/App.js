@@ -11,7 +11,7 @@ import WizardForm from "./components/wizard_form/WizardForm";
 
 function App() {
 	return (
-    	<div className="App">
+		<div className="App">
     		<Avator image={image} radius={75} size={120}></Avator>
     		<Counter />
     		<WizardForm />
