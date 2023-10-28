@@ -8,7 +8,13 @@ function myFunction1()
 	document.getElementById("demo1").innerHTML = "Benjamin."
 }
 
-var x;
-let y, z;
+const person = {
+	firstName: "John",
+	lastName : "Doe",
+	id       : 5566,
+	fullName : function() {
+		return this.firstName + " " + this.lastName;
+	}
+};
 
-z = x + y;
+const car = {type:"Ford", model:"Mustang GT5", colour:"Blue"};
