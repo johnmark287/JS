@@ -1,15 +1,15 @@
 /**
  * importing modules
- * npm => package.j => type: "module"
+ * npm => package.js => type: "module"
  */
 
 //
 import person from "./exporting.js";
-import { x } from "./exporting.js";
+import { xFunction } from "./exporting.js";
 // renaming import
 import { default as y } from "./exporting.js"
 
-console.log(y)
+console.log(xFunction)
 
 // let johnmark = {
 //     name: "johnmark",

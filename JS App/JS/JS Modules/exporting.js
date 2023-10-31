@@ -15,7 +15,7 @@ module.export = {
 export default person
 
 // method 4
-export let x = "x" 
+export const xFunction = () => "hello"
 let johnmark = {
     name: "johnmark",
     age: 35,
