@@ -1,0 +1,14 @@
+# Look the following Array methods
+
+## Handle map() method
+
+- map()
+- filter()
+- indexof()
+- find()
+- reduce()
+- foreach()
+- splice()
+
+<!-- ((*ptr(int)))(int, int) -->
+<!-- ptr is a function pointer(int) that returns a pointer to a function(int, int) that returns (int) -->
