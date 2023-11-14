@@ -2,27 +2,28 @@
 
 // const title = document.querySelector('#main-heading');
 // title.style.color = 'red';
-// console.log(title);
 
-// // adding elements
-// const ul = document.querySelector('ul');
+// adding elements
+const ul = document.querySelector('ul');
+console.log(ul);
 const li = document.createElement('li');
 
 ul.append(li);
-
-// modifying the text
+// // modifying the text
 li.innerText = 'Transporter';
 
-// Modifying attributes & classes
+
+
+// // Modifying attributes & classes
 li.setAttribute('id', 'main-heading');
 li.removeAttribute('id');
 
 const title = document.querySelector('main-heading');
 
-console.log(title.getAttribute('id'));
+// console.log(title.getAttribute('id'));
 
 li.classList.add('list-item');
 li.classList.remove('list-item');
 
-// Remove elements
+// // Remove elements
 li.remove();
