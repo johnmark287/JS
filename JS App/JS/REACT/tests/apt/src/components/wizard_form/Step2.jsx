@@ -1,30 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Step2 = ({onNext, onPrevious}) => {
-	const[formState, setFormState] = useState({username: "", registrationNumber:""});
-	const handleChange = (event) => {
-		console.log(event);		
-		const name = event.target.name;
-		const value = event.target.value;
-		setFormState({...formState, [name]: value})
-	}
+export const Step2 = ({onNext, onPrevious, formState, onFieldValueChange }) => {
 		return (
         <div>
-			<button onClick={onPrevious}>previous</button><br></br>
+			<button onClick={onPrevious}>previous</button><br/><br/>
             <input
-				name='username' 
+				name='phone' 
 				type="text" 
-				placeholder='Enter Username' 
-				value={formState.username}
-				onChange={handleChange}
+				placeholder='Enter Phone Number' 
+				value={formState["phone"]}
+				onChange={onFieldValueChange}
 			/><br/>
 			<input 
-				name="registrationNumber" 
+				name="profile" 
 				type="text" 
 				placeholder='Enter Registration Number'
-				value={formState.regNo}
-				onChange={handleChange}
-			/><br/>
+				value={formState["profile"]}
+				onChange={onFieldValueChange}
+			/><br/><br/>
+			<label htmlFor="gender">Choose gender:</label>
+            <select name="gender" id="gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="o">Other</option>
+            </select>
+			<br/><br/>
             <button onClick={onNext}>next</button>
         </div>
     )

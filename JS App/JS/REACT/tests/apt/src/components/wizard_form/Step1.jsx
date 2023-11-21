@@ -1,28 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Step = ({onNext}) => {
-	const[formState, setFormState] = useState({email: "", password:""});
-	const handleChange = (event) => {
-		console.log(event);		
-		const name = event.target.name;
-		const value = event.target.value;
-		setFormState({...formState, [name]: value});
-	}
+export const Step = ({onNext, formState, onFieldValueChange }) => {
 	return (
 		<div>
 			<input
-				name='email' 
+				name='fname' 
 				type="text" 
-				placeholder='Enter Your Email' 
-				value={formState.username}
-				onChange={handleChange}
+				placeholder='Enter First Name' 
+				value={formState["fname"]}
+				onChange={onFieldValueChange}
 			/><br/>
 			<input 
-				name='password' 
-				type="password" 
-				placeholder='Enter password' 
+				name="lname" 
+				type="text" 
+				placeholder='Enter Last Name'
+				value={formState["lname"]}
+				onChange={onFieldValueChange}
+			/><br/>
+			<input 
+				name='email' 
+				type="text" 
+				placeholder='Enter Email' 
 				value={formState.password}
-				onChange={handleChange}
+				onChange={onFieldValueChange}
 			/>
 			<br/>
 			<button onClick={onNext}>next</button>
