@@ -1,0 +1,28 @@
+/hu./ # hug, pun.
+/.un/ # fun, run (any letter)
+/str/g
+/b[aiu]g/ # big, bag, bog, bug, beg
+/[a-z]/ig # match every letter from a-z
+/[2-6]/ # match every numbers from 2-6
+/[2-6a-z]/ # combines functions of both above
+/[^0-9aeiou]/ # doesn't match 0-9 including vowels
+/s+/ # matching if a character e.g. 's' ocurrs once or more than once
+/go*/ # match 'g' and then 'o' 0 or more times
+/t[a-z]*?i/ # lazy match (smallest part of a string)
+/t[a-z]*i/ # greedy match
+/C+/ # matches 1 or more C's
+/^John/ # matches he position at the beginning line
+/$John/ # matches the position at the end of the line
+/\w/ # matches any letters or numbers and underscore
+/\W/ # Does the opposite
+/\d/ # match digits
+/\D/ #opposite
+/\s/g # all the white spaces, newline, tab, form feed
+/\S/ # opposite
+/^[A-Za-z]{2,}/ # means it must have atleast two letters.
+/^[A-Za-z]{2,}/\d*$/ # means the digits can be 0-infinity but must be at the end
+/Oh{3,6} no/ # matches 3-6 number of occurences of 'h'
+/favou?te/ # checks for the 0 or once of the preceeding element(may have a 'u or not')
+/q(?=u)/ # positive look ahead
+/q(?!u)/ # negative look ahead
+/(\w+)\s\1/ # capture group. handled with paranthesis(repeate same search twice)
